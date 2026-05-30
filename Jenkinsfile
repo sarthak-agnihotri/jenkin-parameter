@@ -55,6 +55,11 @@ pipeline{
                 bat 'mvn package'
             }
         }
+        stage('Run App'){
+            steps{
+                bat 'java -cp target/classes App'
+            }
+        }
     }
     post{
         success{
